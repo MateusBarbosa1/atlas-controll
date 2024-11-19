@@ -102,8 +102,9 @@
         btn1.addEventListener("click", () => {
             const audio = document.getElementById("meuAudio1").play();
         });
-        btn2.addEventListener("click", () => {
-            const audio1 = document.getElementById("meuAudio2").play();
+        btn2.addEventListener("click", async () => {
+            const audio1 = document.getElementById("meuAudio2");
+            await audio1.play();
             const audio2 = document.getElementById("meuAudio8").play();
             
         })
