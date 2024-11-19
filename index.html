@@ -86,13 +86,27 @@
         <source src="0020.mp3" type="audio/mp3"> <!-- Substitua pelo caminho do seu arquivo -->
         Seu navegador não suporta o elemento de áudio.
       </audio>
+      <audio id="meuAudio21" style="display: none;" controls>
+        <source src="0021.mp3" type="audio/mp3"> <!-- Substitua pelo caminho do seu arquivo -->
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <audio id="meuAudio22" style="display: none;" controls>
+        <source src="0022.mp3" type="audio/mp3"> <!-- Substitua pelo caminho do seu arquivo -->
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <audio id="meuAudio23" style="display: none;" controls>
+        <source src="0023.mp3" type="audio/mp3"> <!-- Substitua pelo caminho do seu arquivo -->
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
     <button id="01">Apresentação</button>
     <button id="02">Temperatura 1</button>
     <button id="02-02">Temperatura 2</button>
     <button id="02-03">Temperatura 3</button>
     <button id="03">Umidade</button>
-    <button id="04">Umidade Do Solo</button>
-    <button id="05">Fim</button>
+    <button id="04">Indo ate o solo</button>
+    <button id="05">Piada</button>
+    <button id="06">Garra no seco</button>
+    <button id="07">Garra no molhado</button>
 
     <script>
         const btn1 = document.getElementById("01");
@@ -103,6 +117,9 @@
         const btn3 = document.getElementById("03");
         const btn4 = document.getElementById("04");
         const btn5 = document.getElementById("05");
+        const btn6 = document.getElementById("06");
+        const btn7 = document.getElementById("07");
+
 
         btn1.addEventListener("click", () => {
             const audio = document.getElementById("meuAudio1").play();
@@ -153,10 +170,20 @@
             const audio = document.getElementById("meuAudio17").play();
             
         })
-        btn4.addEventListener("click", () => {
+        btn4.addEventListener("click", async () => {
+            const audio1 = document.getElementById("meuAudio20").play();
             
         })
         btn5.addEventListener("click", () => {
+            const audio1 = document.getElementById("meuAudio21").play();
+            
+        })
+        btn6.addEventListener("click", () => {
+            const audio1 = document.getElementById("meuAudio22").play();
+            
+        })
+        btn7.addEventListener("click", () => {
+            const audio1 = document.getElementById("meuAudio23").play();
             
         })
     </script>
