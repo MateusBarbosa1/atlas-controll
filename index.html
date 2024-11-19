@@ -104,8 +104,16 @@
         });
         btn2.addEventListener("click", async () => {
             const audio1 = document.getElementById("meuAudio2");
-            await audio1.play();
-            const audio2 = document.getElementById("meuAudio8").play();
+            const audio2 = document.getElementById("meuAudio8");
+
+            // Tocar o primeiro áudio e esperar ele terminar
+            await new Promise((resolve) => {
+                audio1.play();
+                audio1.onended = resolve;  // Aguardar até o áudio1 terminar
+            });
+
+            // Tocar o segundo áudio após o primeiro
+            audio2.play();
             
         })
         btn3.addEventListener("click", () => {
