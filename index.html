@@ -87,7 +87,9 @@
         Seu navegador não suporta o elemento de áudio.
       </audio>
     <button id="01">Apresentação</button>
-    <button id="02">Temperatura</button>
+    <button id="02">Temperatura 1</button>
+    <button id="02-02">Temperatura 2</button>
+    <button id="02-03">Temperatura 3</button>
     <button id="03">Umidade</button>
     <button id="04">Umidade Do Solo</button>
     <button id="05">Fim</button>
@@ -95,6 +97,9 @@
     <script>
         const btn1 = document.getElementById("01");
         const btn2 = document.getElementById("02");
+        const btn2_btn2 = document.getElementById("02-02");
+        const btn2_btn3 = document.getElementById("02-03");
+
         const btn3 = document.getElementById("03");
         const btn4 = document.getElementById("04");
         const btn5 = document.getElementById("05");
@@ -105,6 +110,34 @@
         btn2.addEventListener("click", async () => {
             const audio1 = document.getElementById("meuAudio2");
             const audio2 = document.getElementById("meuAudio8");
+
+            // Tocar o primeiro áudio e esperar ele terminar
+            await new Promise((resolve) => {
+                audio1.play();
+                audio1.onended = resolve;  // Aguardar até o áudio1 terminar
+            });
+
+            // Tocar o segundo áudio após o primeiro
+            audio2.play();
+            
+        })
+        btn2_btn2.addEventListener("click", async () => {
+            const audio1 = document.getElementById("meuAudio2");
+            const audio2 = document.getElementById("meuAudio6");
+
+            // Tocar o primeiro áudio e esperar ele terminar
+            await new Promise((resolve) => {
+                audio1.play();
+                audio1.onended = resolve;  // Aguardar até o áudio1 terminar
+            });
+
+            // Tocar o segundo áudio após o primeiro
+            audio2.play();
+            
+        })
+        btn2_btn3.addEventListener("click", async () => {
+            const audio1 = document.getElementById("meuAudio2");
+            const audio2 = document.getElementById("meuAudio9");
 
             // Tocar o primeiro áudio e esperar ele terminar
             await new Promise((resolve) => {
