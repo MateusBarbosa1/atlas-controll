@@ -98,6 +98,10 @@
         <source src="0023.mp3" type="audio/mp3"> <!-- Substitua pelo caminho do seu arquivo -->
         Seu navegador não suporta o elemento de áudio.
       </audio>
+      <audio id="meuAudio24" style="display: none;" controls>
+        <source src="0023.mp3" type="audio/mp3"> <!-- Substitua pelo caminho do seu arquivo -->
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
     <button id="01">Apresentação</button>
     <button id="02">Temperatura 1</button>
     <button id="02-02">Temperatura 2</button>
@@ -107,6 +111,8 @@
     <button id="05">Piada</button>
     <button id="06">Garra no seco</button>
     <button id="07">Garra no molhado</button>
+    <button id="08">Fim</button>
+
 
     <script>
         const btn1 = document.getElementById("01");
@@ -119,6 +125,8 @@
         const btn5 = document.getElementById("05");
         const btn6 = document.getElementById("06");
         const btn7 = document.getElementById("07");
+        const btn8 = document.getElementById("08");
+
 
 
         btn1.addEventListener("click", () => {
@@ -184,6 +192,10 @@
         })
         btn7.addEventListener("click", () => {
             const audio1 = document.getElementById("meuAudio23").play();
+            
+        })
+        btn8.addEventListener("click", () => {
+            const audio1 = document.getElementById("meuAudio24").play();
             
         })
     </script>
